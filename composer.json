@@ -1,0 +1,21 @@
+{
+    "name": "beanstalkhq/laramandrill",
+    "description": "Mandrill API for Laravel",
+    "authors": [
+        {
+            "name": "Beanstalkhq",
+            "email": "skyler.lewis@beanstalkpro.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": "4.2.*",
+        "guzzlehttp/guzzle": "5.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Beanstalkhq\\Laramandrill\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
