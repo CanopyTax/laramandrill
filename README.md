@@ -1,0 +1,4 @@
+laramandrill
+============
+
+Laravel Mandrill plugin!
