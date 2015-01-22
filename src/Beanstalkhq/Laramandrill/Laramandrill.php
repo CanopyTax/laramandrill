@@ -28,7 +28,7 @@ class Laramandrill
 
 		// determine endpoint
 		$client = new Client(['base_url' => 'https://mandrillapp.com/api/1.0/']);
-		$client->setDefaultOption('verify', true);
+		$client->setDefaultOption('verify', $verify);
 		$endpoint = $callName.'.'.$output;
 
 		// build payload
