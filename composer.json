@@ -9,12 +9,12 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "illuminate/support": "4.2.*",
-        "guzzlehttp/guzzle": "5.0.*"
+        "illuminate/support": "~4.0|~5.0",
+        "guzzlehttp/guzzle": "5.2.*"
     },
     "autoload": {
-        "psr-0": {
-            "Beanstalkhq\\Laramandrill\\": "src/"
+        "psr-4": { 
+            "Beanstalkhq\\Laramandrill\\": "src/Beanstalkhq/Laramandrill/" 
         }
     },
     "minimum-stability": "stable"
