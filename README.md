@@ -12,14 +12,14 @@ This package is a simple wrapper for working w/ the [Mandrill API](http://mandri
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `beanstalkhq/laramandrill`.
 
 	"require": {
-		"beanstalkhq/laramandrill": "1.0.*"
+		"beanstalkhq/laramandrill": "~1.0"
 	}
 
 Next, update Composer from the Terminal:
 
     composer update
 
-Once this operation completes, the final step is to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
+Once this operation completes, the final step is to add the service provider. Open `config/app.php`, and add a new item to the providers array.
 
     'Beanstalkhq\Laramandrill\LaramandrillServiceProvider'
     
