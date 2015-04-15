@@ -23,10 +23,13 @@ class Laramandrill
 		}
 		// Setup
 		$api_key = \Config::get('laramandrill::laramandrill.api_key');
+		$verify = \Config::get('laramandrill::laramandrill.verify');
+		$output = \Config::get('laramandrill::laramandrill.output');
 
 		// determine endpoint
 		$client = new Client(['base_url' => 'https://mandrillapp.com/api/1.0/']);
-		$endpoint = $callName.'.json';
+		$client->setDefaultOption('verify', $verify);
+		$endpoint = $callName.'.'.$output;
 
 		// build payload
 		$arguments['key'] = $api_key;
@@ -42,7 +45,7 @@ class Laramandrill
 			}
 		}
 		return $response->getBody();
-  	}
+	}
 
 	/**
 	 * _validateRequestVerb
