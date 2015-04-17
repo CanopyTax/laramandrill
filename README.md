@@ -27,6 +27,10 @@ Once this operation completes, the final step is to add the service provider. Op
 
     'Beanstalkhq\Laramandrill\LaramandrillServiceProvider'
     
+Add this line to `aliases` array in your `config/app.php`
+    
+    'Laramandrill' => 'Beanstalkhq\Laramandrill\Facades\Laramandrill'
+    
 Lastly you need to add your Mandrill API key. Generate the config file and edit it inside {root}/config/laramandrill.php
 
     $ php artisan vendor:publish
