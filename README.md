@@ -4,6 +4,7 @@ laramandrill
 Laravel Mandrill plugin!
 
 Version 1.x - For Laravel 4.x
+
 Version 2.x - For Laravel 5.x
 
 This plugin for laravel is based heavily on the plugin by [MichMich](https://github.com/MichMich/laravel-mandrill) but made for composer and some other goodies.
