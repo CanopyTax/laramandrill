@@ -1,4 +1,4 @@
-<?php namespace Beanstalkhq\Laramandrill\Facades;
+<?php namespace CanopyTax\Laramandrill\Facades;
  
 use Illuminate\Support\Facades\Facade;
  

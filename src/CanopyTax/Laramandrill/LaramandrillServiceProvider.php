@@ -1,4 +1,4 @@
-<?php namespace Beanstalkhq\Laramandrill;
+<?php namespace CanopyTax\Laramandrill;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class LaramandrillServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('beanstalkhq/laramandrill');
+		$this->package('CanopyTax/laramandrill');
 	}
 
 	/**
@@ -36,7 +36,7 @@ class LaramandrillServiceProvider extends ServiceProvider {
 		$this->app->booting(function()
 		{
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Laramandrill', 'Beanstalkhq\Laramandrill\Facades\Laramandrill');
+			$loader->alias('Laramandrill', 'CanopyTax\Laramandrill\Facades\Laramandrill');
 		});
 	}
 

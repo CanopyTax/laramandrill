@@ -9,10 +9,10 @@ This package is a simple wrapper for working w/ the [Mandrill API](http://mandri
 
 ## Install ##
 
-Begin by installing this package through Composer. Edit your project's `composer.json` file to require `beanstalkhq/laramandrill`.
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `CanopyTax/laramandrill`.
 
 	"require": {
-		"beanstalkhq/laramandrill": "~1.0"
+		"CanopyTax/laramandrill": "~1.0"
 	}
 
 Next, update Composer from the Terminal:
@@ -21,11 +21,11 @@ Next, update Composer from the Terminal:
 
 Once this operation completes, the final step is to add the service provider. Open `config/app.php`, and add a new item to the providers array.
 
-    'Beanstalkhq\Laramandrill\LaramandrillServiceProvider'
+    'CanopyTax\Laramandrill\LaramandrillServiceProvider'
     
 Lastly you need to add your Mandrill API key. Generate the config file and edit it inside {root}/app/config/packages/laramandrill/laramandrill.php
 
-    $ php artisan config:publish beanstalkhq/laramandrill
+    $ php artisan config:publish CanopyTax/laramandrill
 
 
 ## Usage ##

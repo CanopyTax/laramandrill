@@ -1,4 +1,4 @@
-<?php namespace Beanstalkhq\Laramandrill;
+<?php namespace CanopyTax\Laramandrill;
 
 use GuzzleHttp\Client;
 
