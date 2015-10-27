@@ -49,5 +49,4 @@ class LaramandrillServiceProvider extends ServiceProvider {
 	{
 		return array('laramandrill');
 	}
-
 }

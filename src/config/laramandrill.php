@@ -22,5 +22,10 @@ return [
 	 */
 	'output' => 'json',
 
+    /*
+     * Set the Mandrill API base URL
+     */
+    'api_base_url' => 'https://mandrillapp.com/api/1.0/'
+
 
 ];

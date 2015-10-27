@@ -5,16 +5,21 @@
         {
             "name": "CanopyTax",
             "email": "skyler.lewis@canopytax.com"
+        },
+        {
+          "name": "Wemerson Januario",
+          "email": "wemerson.januario@gmail.com",
+          "homepage": "http://linkedin.com/in/wemersonjanuario"
         }
     ],
     "require": {
         "php": ">=5.5.0",
         "illuminate/support": "~5.0",
-        "guzzlehttp/guzzle": "6.0.*"
+        "guzzlehttp/guzzle": "5.2.*|6.0.*"
     },
     "autoload": {
-        "psr-4": { 
-            "CanopyTax\\Laramandrill\\": "src/CanopyTax/Laramandrill/" 
+        "psr-4": {
+            "CanopyTax\\Laramandrill\\": "src/CanopyTax/Laramandrill/"
         }
     },
     "minimum-stability": "stable"
