@@ -18,7 +18,7 @@ class LaramandrillServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('CanopyTax/laramandrill');
+		
 	}
 
 	/**
