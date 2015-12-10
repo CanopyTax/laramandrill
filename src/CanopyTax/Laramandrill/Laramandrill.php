@@ -1,6 +1,7 @@
 <?php namespace CanopyTax\Laramandrill;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 
 class Laramandrill
 {
@@ -27,23 +28,32 @@ class Laramandrill
         $api_base_url = config('laramandrill.api_base_url');
 
         // determine endpoint
-        $client = new Client(['base_url' => $api_base_url]);
-        $client->setDefaultOption('verify', $verify);
-        $endpoint = $callName . '.' . $output;
+        $client = new Client([]);
+        $endpoint = $api_base_url.$callName . '.' . $output;
 
         // build payload
         $arguments['key'] = $api_key;
-        $httpVerb = strtolower($httpVerb);
+        $httpVerb = strtoupper($httpVerb);
+
+        $options = [
+            'headers' => [
+                'User-Agent' => 'laramandrill/1.0',
+                'Content-Type' => 'application/json',
+            ],
+            'body' => json_encode($arguments),
+            'verify' => $verify,
+        ];
 
         try {
-            $response = $client->{$httpVerb}($endpoint, ['headers' => ['User-Agent' => 'laramandrill/1.0', 'Content-Type' => 'application/json',], 'json' => $arguments,]);
+            $response = $client->request($httpVerb, $endpoint, $options);
+            return $response->getBody();
         } catch (RequestException $e) {
             echo $e->getRequest() . "\n";
             if ($e->hasResponse()) {
                 echo $e->getResponse() . "\n";
             }
         }
-        return $response->getBody();
+        throw new \Exception('Unknown issue with mandrill request/response');
     }
 
     /**
