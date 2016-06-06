@@ -2,6 +2,7 @@
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
+use function GuzzleHttp\Psr7\str;
 
 class Laramandrill
 {
@@ -15,6 +16,13 @@ class Laramandrill
         $this->apiKey = config('laramandrill.api_key');
     }
 
+    /**
+     * @param $httpVerb
+     * @param $callName
+     * @param array $arguments
+     * @return \Psr\Http\Message\StreamInterface
+     * @throws \Exception
+     */
     public static function request($httpVerb, $callName, array $arguments)
     {
         // Validations
@@ -29,7 +37,7 @@ class Laramandrill
 
         // determine endpoint
         $client = new Client([]);
-        $endpoint = $api_base_url.$callName . '.' . $output;
+        $endpoint = $api_base_url . $callName . '.' . $output;
 
         // build payload
         $arguments['key'] = $api_key;
@@ -46,11 +54,12 @@ class Laramandrill
 
         try {
             $response = $client->request($httpVerb, $endpoint, $options);
+
             return $response->getBody();
         } catch (RequestException $e) {
-            echo $e->getRequest() . "\n";
+            echo str($e->getRequest());
             if ($e->hasResponse()) {
-                echo $e->getResponse() . "\n";
+                echo str($e->getResponse());
             }
         }
         throw new \Exception('Unknown issue with mandrill request/response');

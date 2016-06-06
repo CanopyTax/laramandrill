@@ -1,0 +1,21 @@
+data:
+  image: dylanlindgren/docker-laravel-data
+  volumes:
+    - .:/data/www/
+    - log:/data/logs
+  privileged: true
+
+sniff:
+  image: alairock/docker-php-codesniffer
+  volumes_from:
+    - data
+
+phpunit:
+  image: dylanlindgren/docker-laravel-phpunit
+  volumes_from:
+    - data
+
+composer:
+  image: dylanlindgren/docker-laravel-composer
+  volumes_from:
+    - data
