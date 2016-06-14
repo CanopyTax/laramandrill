@@ -5,11 +5,6 @@
         {
             "name": "CanopyTax",
             "email": "skyler.lewis@canopytax.com"
-        },
-        {
-          "name": "Wemerson Januario",
-          "email": "wemerson.januario@gmail.com",
-          "homepage": "http://linkedin.com/in/wemersonjanuario"
         }
     ],
     "require": {
